@@ -1,6 +1,3 @@
----
----
-
 //
 // IMPORTS
 //
@@ -18,7 +15,7 @@ html {
 }
 
 body {
-	background: $white;
+  background: $white;
   font: 18px/1.4 $helvetica;
   color: $darkGray;
 }
@@ -34,7 +31,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $helveticaNeue;
   color: $darkerGray;
   font-weight: bold;
-
   line-height: 1.7;
   margin: 1em 0 15px;
   padding: 0;
@@ -71,7 +67,7 @@ p {
 a {
   color: $blue;
   text-decoration: none;
-	cursor: pointer;
+  cursor: pointer;
   &:hover, &:active {
     color: $blue;
   }
@@ -134,12 +130,12 @@ img {
 // http://nicolasgallagher.com/micro-clearfix-hack/
 .clearfix:before,
 .clearfix:after {
-    content: " ";
-    display: table;
+  content: " ";
+  display: table;
 }
 
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
 
 /*********************/
@@ -244,6 +240,10 @@ nav {
 .posts > .post {
   padding-bottom: 2em;
   border-bottom: 1px solid $lightGray;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
 .posts > .post:last-child {
@@ -252,6 +252,54 @@ nav {
 }
 
 .post {
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+
+  .post-header {
+    margin-bottom: 15px;
+  }
+
+  .post-title {
+    font-size: 1.8rem;
+    color: $darkGray;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+  }
+
+  .post-title:hover {
+    color: $blue;
+  }
+
+  .entry {
+    font-size: 1rem;
+    color: $gray;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+  .read-more {
+    text-transform: uppercase;
+    font-size: 15px;
+    color: $blue;
+    font-weight: bold;
+    text-decoration: none;
+    transition: text-decoration 0.3s ease;
+  }
+
+  .read-more:hover {
+    text-decoration: underline;
+  }
+
+  .post-date {
+    font-size: 0.9rem;
+    color: $gray;
+    font-style: italic;
+  }
+
   blockquote {
     margin: 1.8em .8em;
     border-left: 2px solid $gray;
@@ -259,15 +307,6 @@ nav {
     color: $gray;
     font-size: 22px;
     font-style: italic;
-  }
-
-  .comments {
-    margin-top: 10px;
-  }
-
-  .read-more {
-    text-transform: uppercase;
-    font-size: 15px;
   }
 }
 
